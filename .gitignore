@@ -104,3 +104,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignored cypress files
+cypress/videos
+cypress/screenshots
