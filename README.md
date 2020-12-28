@@ -19,7 +19,7 @@ it('should work', () => {
 ```
 ![Basic Test Case: 'it should work'](https://github.com/2n2b1/cy2e/blob/main/docs/Screen%20Shot%202020-12-28%20at%2013.47.57.png?raw=true)
 
-[Video Playback: Basic Test Case](https://github.com/2n2b1/cy2e/raw/main/cyp-cra/examples/test-video-example.mp4)
+[Video Playback: Basic Test Case](https://user-images.githubusercontent.com/884380/103235324-ddd51b00-490f-11eb-876b-d8b36403aeb0.mp4)
 
 
 ---
