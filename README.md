@@ -1,5 +1,8 @@
 # cy2e
 
+## Status
+![Docker Image CI](https://github.com/2n2b1/cy2e/workflows/Docker%20Image%20CI/badge.svg)
+
 ## What
 Using Cypress to do unit tests on React applications
 
