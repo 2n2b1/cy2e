@@ -30,21 +30,34 @@ __(extends yarn)__
     - start
         react-scripts start
 ```
+___
 
-#### with Video Record Playback
+### Extending Tests with Video Record Playback
 ```bash
 yarn run cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
 ```
 
+#### Adding recording to `package.json`   
 
+a) Include the ENV variable inline inside the `package.json` file:   
+```bash
+"cypress:run": "CYPRESS_RECORD_KEY='af144ab3-4d1b-41f5-813e-92b36c586c7d' npm run cypress:start:wait -- \"cypress run --record\"",
+```
+
+b) Set it globally, via 
+```bash
+export CYPRESS_RECORD_KEY='af144ab3-4d1b-41f5-813e-92b36c586c7d'
+```
+
+---
 
 ## Example
 
 ### Running baseline test with video recording
 ```git
-kjeske-bh@MBP-BH-001 ~/IdeaProjects/cy2e/cyp-cra (initial-app-creation) $ yarn run cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
+$ yarn run cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
+$ cy2e/cyp-cra//.bin/cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
 yarn run v1.22.5
-$ /Users/kjeske-bh/IdeaProjects/cy2e/cyp-cra/node_modules/.bin/cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
 
 ====================================================================================================
 
@@ -87,13 +100,13 @@ $ /Users/kjeske-bh/IdeaProjects/cy2e/cyp-cra/node_modules/.bin/cypress run --rec
   (Video)
 
   -  Started processing:  Compressing to 32 CRF                                                     
-  -  Finished processing: /Users/kjeske-bh/IdeaProjects/cy2e/cyp-cra/cypress/videos/a    (0 seconds)
+  -  Finished processing: cy2e/cyp-cra/cypress/videos/a    (0 seconds)
                           pp.spec.tsx.mp4                                                           
 
 
   (Uploading Results)
 
-  - Done Uploading (1/1) /Users/kjeske-bh/IdeaProjects/cy2e/cyp-cra/cypress/videos/app.spec.tsx.mp4
+  - Done Uploading (1/1) cy2e/cyp-cra/cypress/videos/app.spec.tsx.mp4
 
 ====================================================================================================
 
@@ -113,3 +126,8 @@ $ /Users/kjeske-bh/IdeaProjects/cy2e/cyp-cra/node_modules/.bin/cypress run --rec
 
 ✨  Done in 20.05s.
 ```
+
+---
+
+### Code Coverage
+
