@@ -1,10 +1,31 @@
 # cy2e
 
+## What
+Visual unit and integration testing for web-based applications.
+
+## Example
+
+## Test Case 1 - Load a webpage with the an anchor element that says 'Learn React'
+- Load a hosted page at http://localhost:3000
+- Verify there is an HTML element 'anchor' <A>
+- Verify that the anchor has a text value of 'Learn React'
+
+### Basic Test Case
+```ts
+it('should work', () => {
+	cy.visit('http://localhost:3000');
+	cy.get('a').should('have.text', 'Learn React');
+})
+```
+![Basic Test Case: 'it should work'](https://github.com/2n2b1/cy2e/blob/main/docs/Screen%20Shot%202020-12-28%20at%2013.47.57.png?raw=true)
+
+[Video Playback: Basic Test Case](https://github.com/2n2b1/cy2e/raw/main/cyp-cra/examples/test-video-example.mp4)
+
+
+---
+
 ## Status
 ![Docker Image CI](https://github.com/2n2b1/cy2e/workflows/Docker%20Image%20CI/badge.svg)
-
-## What
-Using Cypress to do unit tests on React applications
 
 ## How
 Using command line interface:
@@ -51,12 +72,10 @@ export CYPRESS_RECORD_KEY='af144ab3-4d1b-41f5-813e-92b36c586c7d'
 
 ---
 
-## Example
-
 ### Running baseline test with video recording
-```git
-$ yarn run cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
-$ cy2e/cyp-cra//.bin/cypress run --record --key af144ab3-4d1b-41f5-813e-92b36c586c7d
+```bash
+$ yarn run cypress run --record
+$ cy2e/cyp-cra/.bin/cypress run --record
 yarn run v1.22.5
 
 ====================================================================================================
