@@ -6,8 +6,8 @@
     "@cypress/code-coverage": "^3.8.8",
     "@cypress/instrument-cra": "^1.4.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "cypress": "^6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -19,16 +19,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "cypress:start:app": "BROWSER=none react-scripts -r @cypress/instruction-cra start",
-    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:6500",
+    "cypress:start:app": "BROWSER=none react-scripts -r @cypress/instrument-cra start",
+    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
     "cypress:open": "npm run cypress:start:wait -- \"cypress open\"",
-    "cypress:run": "npm run cypress:start:wait -- \"cypress run\"",
+    "cypress:run": "npm run cypress:start:wait -- \"cypress run --record af144ab3-4d1b-41f5-813e-92b36c586c7d\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
