@@ -108,3 +108,4 @@ dist
 # Ignored cypress files
 cypress/videos
 cypress/screenshots
+cypress/
